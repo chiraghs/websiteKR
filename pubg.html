@@ -152,7 +152,7 @@
                                     <h2>Register <br> <br></h2>
                                 </div><!-- entry-title -->
                             </div><!-- entry-header -->
-            
+                            
                             <div class="contact-form">
                                 <div class="row">
                                         <div class="col-12 col-md-6">
@@ -180,9 +180,9 @@
                                                     <input id="mobnum" type="text" placeholder="Mobile Number" required>
                                                 </div>
             
-            
+                                    <!-- for submit button add onclick="to_register('eventname')"-->
                                     <div class="col-12 submit flex justify-content-center">
-                                        <input type="submit" name="" value="SUBMIT" class="btn">
+                                        <input type="submit" name="" value="SUBMIT" class="btn" onclick="to_register('pubg')"/>
                                     </div>
             
                                 </div><!-- row -->
@@ -232,5 +232,13 @@
     <script type='text/javascript' src='js/circle-progress.min.js'></script>
     <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
     <script type='text/javascript' src='js/custom.js'></script>
+    
+    <!-- Add Below 6 script files-->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+    <script src="js/mainfirebase.js"></script>
+    <script src="js/groupevents.js"></script>
 </body>
 </html>
