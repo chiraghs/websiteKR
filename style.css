@@ -234,8 +234,15 @@ body {
 -----------------------------------------------------------*/
 .hero-content {
     padding: 220px 0;
-    background: url("images/cover.jpg") no-repeat;
+    background: url("images/covermob.jpg") no-repeat;
     background-size: cover;
+}
+@media screen and (max-width: 550px) {
+    .hero-content {
+        padding: 220px 0;
+        background: url("images/covermob.jpg") no-repeat;
+        background-size: cover;
+    }
 }
 
 .hero-content .entry-header {
@@ -244,8 +251,35 @@ body {
 }
 
 .hero-content .entry-header h2 {
-    padding: 50px;
-    margin: 0;
+    padding: 5
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    0px;
+    margin-top:-100px;
     font-family: mountains;
     font-size:120px;
     background: -webkit-linear-gradient(#00d0ff, #25ffbf);
@@ -266,7 +300,19 @@ body {
 
 @media screen and (min-width: 992px) {
     .hero-content .entry-header h2 {
-        font-size: 172px;
+        font-size: 175px;
+    }
+
+    .hero-content .entry-header .entry-meta-date {
+        top: 60px;
+    }
+}
+
+
+/*mobile*/
+@media screen and (max-width: 550px) {
+    .hero-content .entry-header h2 {
+        font-size: 70px;
     }
 
     .hero-content .entry-header .entry-meta-date {
@@ -284,6 +330,12 @@ body {
 .countdown-holder {
     min-width: 150px;
     margin-bottom: 30px;
+
+}
+@media screen and (max-width: 550px){
+    .countdown-holder {
+        justify-content: center;
+    }
 }
 
 .countdown-holder .dday,
@@ -816,7 +868,7 @@ body {
 .site-footer {
     position: relative;
     padding: 40px 0 30px;
-    background: url(images/footer-cover.jpg) no-repeat;
+    background: url(images/colorsfoot.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -956,7 +1008,7 @@ body {
 }
 
 .about-us .page-header {
-    background: url("images/about-us-header-background.jpg") no-repeat;
+    background: url("images/covermob.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -1234,11 +1286,12 @@ body {
 # Page Header
 ------------------------------------------------------------*/
 .tickets-page .page-header {
-    background: url("images/tickets-page-header-background.jpg") no-repeat;
+    background: url("images/covermob.jpg") no-repeat;
+    background-size: cover;
 }
 
 .tickets-page .tabs {
-    margin-top: 80px;
+    margin-top: -40px;
 }
 
 .tickets-page .tabs ul {
@@ -1332,9 +1385,14 @@ body {
 }
 
 .single-event-map {
-    width: 100%;
+   max-width: 100%;
     margin-top: 30px;
+  
 }
+@media screen and (max-width: 550px) {
+    .single-event-map img{
+        justify-content: center;
+width:350px;}}
 
 .single-event-map iframe {
     width: 100%;
@@ -1359,6 +1417,8 @@ body {
         padding: 40px;
     }
 }
+
+
 
 @media screen and (min-width: 992px) {
     .single-event-details {

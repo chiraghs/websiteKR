@@ -43,11 +43,11 @@
 
                             <ul>
                                 <li><a href="#">HOME</a></li>
-                                <li><a href="#">EVENTS</a></li>
-                                <li><a href="#">GALLERY</a></li>
-                                <li><a href="#">SCHEUDLE</a></li>
-                                <li><a href="#">SPONSORS</a></li>
-                                <li><a href="#">CONTACT</a></li>
+                                <li><a href="events.html">EVENTS</a></li>
+                                <li><a href="pubg.html">GALLERY</a></li>
+                                <li><a href="schedule.pdf">SCHEUDLE</a></li>
+                                <li><a href="sponsors.html">SPONSORS</a></li>
+                                <li><a href="#contatcus">CONTACT</a></li>
                                 
                                 <li><a href="https://www.facebook.com/rajyotsava.msrit/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.instagram.com/krmsrit/" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -63,12 +63,12 @@
     <div class="hero-content">
         <div class="container">
             <div class="row">
-                <div class="col-12 offset-lg-2 col-lg-10">
+                <div class="col-12 offset-lg-1 col-lg-10">
                     <div class="entry-header">
                         <h2>Kannada Rajyotsava</h2>
                     </div><!-- .entry-header -->
 
-                    <div class="countdown flex flex-wrap justify-content-between" data-date="2018/06/06">
+                    <div class="countdown flex flex-wrap justify-content-between" data-date="2019/11/12">
                         <div class="countdown-holder">
                             <div class="dday"></div>
                             <label>Days</label>
@@ -96,7 +96,7 @@
                 <div class="col-12 ">
                     <div class="entry-footer">
                         <a href="#" class="btn">REGISTER</a>
-                        <a href="#" class="btn">SCHEDULE</a>
+                        <a href="schedule.pdf" class="btn">SCHEDULE</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                             <div class="lineup-artists-wrap flex flex-wrap">
                                 <div class="lineup-artists-description">
                                     <figure class="featured-image d-md-none">
-                                        <a href="#"> <img src="images/mathew-kane.jpg" alt=""> </a>
+                                        <a href="#"> <img src="images/praneshn.jpg" alt=""> </a>
                                     </figure><!-- featured-image -->
 
                                     <div class="lineup-artists-description-container">
@@ -257,7 +257,7 @@
                     <iframe id="gmap_canvas"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.081260318113!2d77.56267741448427!3d13.030497117109674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17dedd4dcca9%3A0x6075bd8d8aed97ab!2sRamaiah%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1572616175150!5m2!1sen!2sin"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div><!-- map -->
 
-                <div class="contact-details">
+                <div id="contatcus" class="contact-details">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6 col-lg-4">
@@ -300,7 +300,7 @@
                                         <img src="images/place.jpg" alt="phone icon">
                                     </figure><!-- phone-icon -->
     
-                                    <div class="contact-content">
+                                    <div id="contactcontent" class="contact-content">
                                         <div class="entry-title">
                                             Address
                                         </div><!-- entry-title -->
@@ -382,6 +382,48 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div><!-- footer-content-wrapper -->
     </footer><!-- site-footer -->
 
+
+
+    <!--script for autoscroll-->
+
+<script>
+        // Select all links with hashes
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+          && 
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex',''); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });</script>
+
     <script type='text/javascript' src='js/jquery.js'></script>
     <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
     <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
@@ -390,5 +432,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script type='text/javascript' src='js/circle-progress.min.js'></script>
     <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
     <script type='text/javascript' src='js/custom.js'></script>
+
+
+    
+
 </body>
 </html>
